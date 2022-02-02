@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
 import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 
  contract ChristmasCoin is ERC20 {
 
-  uint256 public christmas = 1640390400;
+  uint256 public christmas = 1671926400;
   uint256 public INITIAL_SUPPLY;
   address public owner;
 

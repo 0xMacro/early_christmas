@@ -6,7 +6,7 @@ describe("ChristmasCoin contract", function () {
   let owner
   let alice
   
-  const thirtyDaysInSeconds = 2.592e6;
+  const secondsUntilChristmas = 2.817e7;
 
   
   beforeEach(async function () {
@@ -32,7 +32,7 @@ describe("ChristmasCoin contract", function () {
   })
 
   it("should allow presents to be opened after Christmas", async function () {
-    await ethers.provider.send("evm_increaseTime", [thirtyDaysInSeconds])
+    await ethers.provider.send("evm_increaseTime", [secondsUntilChristmas])
     await ethers.provider.send("evm_mine", [])
     await hhChristmasCoin.transfer(alice.address, ethers.utils.parseEther('1'))
   })
