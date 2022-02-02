@@ -1,7 +1,7 @@
-# early_christmas
-contract and test for the Christmas present toy problem
+### early_christmas
+Contract and test for the Christmas present toy problem
 
-# to use:
+### To use:
 
 - `git clone https://github.com/Hacker-DAO/early_christmas.git`
 - `cd early_christmas`
