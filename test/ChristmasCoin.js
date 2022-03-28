@@ -6,7 +6,7 @@ describe("ChristmasCoin contract", function () {
   let owner
   let alice
   
-  const secondsUntilChristmas = 2.817e7;
+  const secondsUntilChristmas = 2.346e7;
 
   
   beforeEach(async function () {
@@ -21,14 +21,6 @@ describe("ChristmasCoin contract", function () {
       alice.address,
       ethers.utils.parseEther('1')))
       .to.be.revertedWith("Not until Christmas!")
-  })
-
-  it("does allow presents to be opened before Christmas", async function () {
-    await hhChristmasCoin.approve(alice.address, ethers.utils.parseEther('1.1'))
-    await hhChristmasCoin.connect(alice).transferFrom(
-      owner.address,
-      alice.address,
-      ethers.utils.parseEther('1'))
   })
 
   it("should allow presents to be opened after Christmas", async function () {
