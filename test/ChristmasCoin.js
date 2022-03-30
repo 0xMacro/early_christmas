@@ -23,6 +23,8 @@ describe("ChristmasCoin contract", function () {
       .to.be.revertedWith("Not until Christmas!")
   })
 
+  // Put an extra test demonstrating the vulnerability here...
+
   it("should allow presents to be opened after Christmas", async function () {
     await ethers.provider.send("evm_increaseTime", [secondsUntilChristmas])
     await ethers.provider.send("evm_mine", [])
